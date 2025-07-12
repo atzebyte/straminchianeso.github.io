@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>che stra minchia ne so</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Rajdhani', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 30px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .button {
+      padding: 12px 24px;
+      border: 2px solid #000;
+      background-color: transparent;
+      color: #000;
+      text-transform: uppercase;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .button:hover {
+      background-color: #000;
+      color: #fff;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap; /* mobile-friendly */
+    }
+
+    .image-container {
+      flex: 1 1 300px;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slideInFade 2s ease-out forwards;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes slideInFade {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .text-container {
+      flex: 1 1 300px;
+      max-width: 600px;
+    }
+
+    .text-container h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .text-container p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      border-top: 1px solid #000;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-container, .text-container {
+        transform: none;
+        opacity: 1;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    che stra minchia ne so
+  </header>
+
+  <nav>
+    <a href="index.html" class="button">Home</a>
+    <a href="chisiamo.html" class="button">Chi Siamo</a>
+    <a href="discord.html" class="button">Discord</a>
+  </nav>
+
+  <div class="hero">
+    <div class="image-container">
+      <img src="job_application.png" alt="Benvenuto nel caos" />
+    </div>
+    <div class="text-container">
+      <h2>Benvenuto nel caos</h2>
+      <p>
+        Questo sito non ha un vero scopo. (non scopa).
+      </p>
+      <p>
+        entra se vuoi... oppure no. Siamo qui comunque.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Che Stra Minchia Ne So. Tutti i diritti riservati.
+  </footer>
+</body>
+</html>

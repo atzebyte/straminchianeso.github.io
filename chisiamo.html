@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi siamo - che stra minchia ne so</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.button {
+  padding: 12px 24px;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.button:hover,
+.button.active {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Contenitore flex per immagine e testo */
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.image-container {
+  flex: 0 0 300px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 2s ease-out forwards;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Sezione giochi */
+.games-section {
+  max-width: 1100px;
+  margin: 50px auto 80px auto;
+  padding: 0 20px;
+}
+
+.games-section h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Contenitore per scorrimento orizzontale */
+.games-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Card di ogni gioco */
+.game-card {
+  flex: 0 0 auto;
+  width: 180px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Immagini dentro le card ridotte (tutte tranne job_application.png) */
+.game-card img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+/* Specifica per l'immagine Roblox */
+.game-card img[alt="Roblox"] {
+  object-fit: contain;
+  background: #fff;
+  padding: 10px;
+}
+
+.game-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 1px solid #000;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    transform: translateX(0);
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .games-container {
+    justify-content: center;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    che stra minchia ne so
+  </header>
+
+  <nav>
+    <a href="index.html" class="button">Home</a>
+    <a href="chisiamo.html" class="button active">Chi Siamo</a>
+    <a href="discord.html" class="button">Discord</a>
+  </nav>
+
+  <div class="main-container">
+    <div class="image-container">
+      <img src="job_application.png" alt="Chi siamo" />
+    </div>
+
+    <div class="content">
+      <h2>Chi siamo</h2>
+      <p>
+        siamo un gruppo di amici ignoranti che si diverte (se non entri ti ritrovi michi sotto casa).
+      </p>
+      <p>
+        Se anche tu tu sei un coglione entra nel discord.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sezione giochi -->
+  <section class="games-section">
+    <h3>Giochi online che giochiamo</h3>
+    <div class="games-container">
+      <div class="game-card">
+        <img src="minecraft.png" alt="Minecraft" />
+        <div class="game-title">Minecraft</div>
+      </div>
+      <div class="game-card">
+        <img src="gta5.png" alt="GTA V" />
+        <div class="game-title">GTA V</div>
+      </div>
+      <div class="game-card">
+        <img src="roblox.png" alt="Roblox" />
+        <div class="game-title">Roblox</div>
+      </div>
+    <div class="game-card">
+      <img src="deltarune.png" alt="Fortnite" />
+      <div class="game-title">deltarune</div>
+    </div>
+  </div>
+  </section>
+
+  <footer>
+    © 2025 Che Stra Minchia Ne So. Tutti i diritti riservati.
+  </footer>
+</body>
+</html>
